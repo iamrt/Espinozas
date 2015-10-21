@@ -1,7 +1,23 @@
 html body {
 	background: #8F9599;
 	width: 100%;
+	height: 100%;
 }
+
+/******************* Sticky Footer Piece 1 of 2 *******************/
+
+div.wrapper {
+	min-height: 100%;
+	margin-bottom: -20px;
+}
+
+.wrapper:after {
+	content: "";
+	display: block;
+	height: 20px;
+}
+
+/******************* End of Sticky Footer Piece 1 of 2 *******************/
 
 .header {
 	background: #8F9599;
@@ -10,40 +26,32 @@ html body {
 }
 
 img#logo-pic {
-	margin-top: 18px;
+	margin-top: 20px;
 }
 
 #contact-pic {
+	float: right;
 }
 
-div#slideshow {
-	width: 100%;
-	overflow: hidden;
-	height: 470px;
-	border-top: 1px solid white;
-	border-bottom: 1px solid white;
+/******************* Nav Styling *******************/
+
+nav {
+	clear: right; /* Clears the float of #contact-pic */
 }
 
-footer#footer {
-	width: 100%;
-	background-color: black;
-	opacity: .5;
-	font-size: 1em;
-	text-align: center;
-	color: white;
-	position: absolute;
-	bottom: 0;
-	height:20px;
+nav div#mobile-menu {
+	display: none;
+	font-size: 1.2em;
+	padding: 10px 20px;
+	color: #346f91;
 }
-
-/* Nav Styling */
 
 nav ul {
 	list-style: none;
 }
 
 nav ul li {
-	float: left;
+	display: inline-block;
 	padding: 10px 20px;
 }
 
@@ -80,7 +88,31 @@ nav ul li a.active {
 	color: #C9DA2B;
 }
 
-/* Gallery Styling */
+/******************* Content Styling *******************/
+
+div#slideshow {
+	width: 100%;
+	overflow: hidden;
+	height: 470px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+/******************* Set Footer Height to the -height of Footer Piece 1 *******************/
+
+footer#footer {
+	width: 100%;
+	background-color: black;
+	opacity: .5;
+	font-size: 1em;
+	text-align: center;
+	color: white;
+	height:20px;
+}
+
+
+
+/******************* Gallery Styling *******************/
 
 #gallery {
 	width: 100%;
@@ -111,6 +143,7 @@ div.br {
 	float: left;
 	height: 150px;
 	width: 100%;
+	cursor: pointer;
 }
 
 #ex-view {
@@ -122,7 +155,7 @@ div.br {
 	border-bottom: 1px solid #346F91;
 }
 
-/* Responsive Styling */
+/******************* Responsive Styling using Bootstrap Breakpoints *******************/
 
 @media screen and (max-width: 768px) {
 	.header {
@@ -138,6 +171,37 @@ div.br {
 	img#contact-pic {
 		height: 75px;
 		width: 145px;
+	}
+
+	nav div#mobile-menu {
+		display: block;
+		width: 100%;
+		background-color: #474B4D;
+		cursor: pointer;
+	}
+
+	.open {
+		max-height: 110px;
+	}
+
+	nav ul {
+		max-height: 0;
+	}
+
+	nav ul li {
+		width: 100%;
+		height: 22px;
+	/*	overflow: hidden;*/
+		border: none;
+
+	}
+
+	nav ul li a.active {
+		border: none;
+	}
+
+	nav ul li a:hover {
+		border: none;
 	}
 
 	div#slideshow {
@@ -156,10 +220,25 @@ div.br {
 	div#slideshow img:lastchild {
 		border-bottom: 1px solid white;
 	}
+
+	div.br {
+		height: 75px;
+		width: 35%;
+	}
+
+	#gallery img {
+		height: 75px;
+		width: 100%;
+	}
+
 }
 
 @media screen and (max-width: 992px) {
 	img#contact-pic {
 		
 	}
+
+@media screen and (min-width: 1200px) {
+
+}
 }
