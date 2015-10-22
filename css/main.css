@@ -21,7 +21,6 @@ div.wrapper {
 
 .header {
 	background: #8F9599;
-	position: relative;
 	height: 150px;
 }
 
@@ -39,20 +38,45 @@ nav {
 	clear: right; /* Clears the float of #contact-pic */
 }
 
-nav div#mobile-menu {
+div.bg-color {
+	background-color: #474B4D;
+}
+
+span.icon-bar {
+	background-color: #fff;
+}
+
+.change-bg {
+	background-color: #474B4D;
+}
+
+nav button#mobile-menu {
 	display: none;
 	font-size: 1.2em;
 	padding: 10px 20px;
 	color: #346f91;
+	border-radius: 4px;
+	border: 1px solid #C9DA2B;
+}
+
+nav button.navbar-toggle {
+	float: left;
+	margin: bottom;
 }
 
 nav ul {
 	list-style: none;
+	transition: max-height 0.8s;
+	-webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: opacity 0.2s;
+	-webkit-transition: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
 }
 
 nav ul li {
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 20px 20px;
 }
 
 nav ul li a {
@@ -110,12 +134,22 @@ footer#footer {
 	height:20px;
 }
 
+/******************* About Styling *******************/
 
+div.content {
+	width: 100%;
+	overflow: hidden;
+
+}
 
 /******************* Gallery Styling *******************/
 
 #gallery {
 	width: 100%;
+}
+
+div.exterior {
+	text-align: center;
 }
 
 div.br {
@@ -125,17 +159,19 @@ div.br {
 	border-radius: 10px;
 	background: white;
 	height: 150px;
-	width: 30%;
-	margin: 10px 20px;
+	width: 27%;
+	margin: 5px 3%;
+
 }
 
-#gallery h2 {
+h2 {
 	text-align: center;
 	font-family: 'Oswald';
 	color: #346F91;
 	padding: 15px 0px;
 	border-top: 3px solid #346F91;
 	border-bottom: 3px solid #346F91;
+	margin-top: 10px;
 }
 
 #gallery img {
@@ -147,7 +183,6 @@ div.br {
 }
 
 #ex-view {
-	display: none;
 	width: 100%;
 	height: 480px;
 	padding: 25px 25px;
@@ -155,7 +190,18 @@ div.br {
 	border-bottom: 1px solid #346F91;
 }
 
+.no-show {
+	display: none;
+}
+
 /******************* Responsive Styling using Bootstrap Breakpoints *******************/
+
+@media screen and (max-width: 450px) {
+	div.br {
+		width: 27%;
+		margin: 5px 3%;
+	}
+}
 
 @media screen and (max-width: 768px) {
 	.header {
@@ -165,35 +211,40 @@ div.br {
 
 	img#logo-pic {
 		height: 35px;
-		width: 125px;
+		width: 130px;
 	}
 
 	img#contact-pic {
 		height: 75px;
-		width: 145px;
+		width: 125px;
 	}
 
-	nav div#mobile-menu {
+	nav button#mobile-menu {
+		padding: 10px 20px;
 		display: block;
-		width: 100%;
-		background-color: #474B4D;
-		cursor: pointer;
 	}
 
 	.open {
-		max-height: 110px;
+		max-height: 20em;
+		opacity: 1;
 	}
 
 	nav ul {
 		max-height: 0;
+		display: block;
+		padding: 0;
+		opacity: 0;
 	}
 
 	nav ul li {
 		width: 100%;
-		height: 22px;
-	/*	overflow: hidden;*/
+		background-color: #474B4D;
 		border: none;
+		padding: 10px 20px;
+	}
 
+	nav ul li a {
+		border: none;
 	}
 
 	nav ul li a.active {
@@ -202,6 +253,10 @@ div.br {
 
 	nav ul li a:hover {
 		border: none;
+	}
+
+	nav ul li a:lastchild {
+		padding-bottom: 20px;
 	}
 
 	div#slideshow {
@@ -223,7 +278,7 @@ div.br {
 
 	div.br {
 		height: 75px;
-		width: 35%;
+		margin: 10px 3%;
 	}
 
 	#gallery img {
@@ -231,13 +286,26 @@ div.br {
 		width: 100%;
 	}
 
+
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
 	img#contact-pic {
-		
+		width: 250px;
 	}
 
+	img#logo-pic {
+		width: 425px;
+	}
+
+	nav ul {
+		width: 100%;
+		text-align: center;
+	}
+
+	nav ul li {
+
+	}
 @media screen and (min-width: 1200px) {
 
 }
