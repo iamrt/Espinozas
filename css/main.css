@@ -4,6 +4,10 @@ html body {
 	height: 100%;
 }
 
+html {
+	overflow-y: scroll;
+}
+
 /******************* Sticky Footer Piece 1 of 2 *******************/
 
 div.wrapper {
@@ -34,10 +38,7 @@ img#logo-pic {
 
 /******************* Nav Styling *******************/
 
-nav {
-	clear: right; /* Clears the float of #contact-pic */
-	display: block;
-}
+
 
 div.bg-color {
 	margin: 20px 5px;
@@ -65,17 +66,16 @@ button#mobile-menu {
 
 button.navbar-toggle {
 	margin: 0;
-	float: left;
+	float: right;
+}
+
+nav {
+	clear: right; /* Clears the float of #contact-pic */
+	display: block;
 }
 
 nav ul {
 	list-style: none;
-	/*transition: max-height 0.8s;
-	-webkit-transition: max-height 0.8s;
-	-moz-transition: max-height 0.8s;*/
-	transition: opacity 0.2s;
-	-webkit-transition: opacity 0.2s;
-	-moz-transition: opacity 0.2s;
 }
 
 nav ul li {
@@ -122,8 +122,6 @@ div#slideshow {
 	width: 100%;
 	overflow: hidden;
 	height: 470px;
-	border-top: 1px solid white;
-	border-bottom: 1px solid white;
 }
 
 /******************* Set Footer Height to the -height of Footer Piece 1 *******************/
@@ -154,6 +152,7 @@ div.content {
 
 div.exterior {
 	text-align: center;
+	margin-bottom: 10px;
 }
 
 div.br {
@@ -190,8 +189,6 @@ h2 {
 	width: 100%;
 	height: 520px;
 	padding: 25px 25px;
-	border-top: 2px solid #346F91;
-	border-bottom: 2px solid #346F91;
 	display: none;
 }
 
@@ -223,27 +220,25 @@ div.showcase-af img {
 h3 {
 	text-align: center;
 	font-family: 'Oswald';
-	color: #8F9599;
-	background-color: #346F91;
-	padding: 5px 10px;
-	border: 3px solid #346F91;
-	/*border-bottom: 3px solid #346F91;*/
-	font-size: 1em;
-	border-radius: 4px;
-	width: 60%;
-	margin: 0 auto;
+	color: #346F91;
+	font-size: 1.4em;
+	margin-top: 0;
 }
-
-/*.no-show {
-	display: none;
-}*/
 
 /******************* Responsive Styling using Bootstrap Breakpoints *******************/
 
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 450px) and (max-width: 500px) {
 	div.br {
 		width: 27%;
 		margin: 5px 3%;
+	}
+
+	#ext-view {
+		height: 280px;
+	}
+
+	div.br img {
+		height: 180px;
 	}
 }
 
@@ -268,16 +263,14 @@ h3 {
 		display: block;
 	}
 
-	/*.open {
-		max-height: 20em;
-		opacity: 1;
-	}*/
+	nav {
+		min-width: 100%;
+	}
 
 	nav ul {
-		/*max-height: 0;*/
+		min-width: 100%;
 		display: none;
 		padding: 0;
-		/*opacity: 0;*/
 	}
 
 	nav ul li {
@@ -361,7 +354,3 @@ h3 {
 	#ext-view img{
 		height: 310px;
 	}
-@media screen and (min-width: 1200px) {
-
-}
-}
