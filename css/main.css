@@ -249,13 +249,14 @@ h3 {
 	}
 
 	img#logo-pic {
-		height: 35px;
-		width: 130px;
+		height: 40px;
+		width: 180px;
 	}
 
 	img#contact-pic {
-		height: 75px;
-		width: 125px;
+		height: 50px;
+		width: 110px;
+		margin-top: 20px;
 	}
 
 	button#mobile-menu {
