@@ -227,7 +227,7 @@ h3 {
 
 /******************* Responsive Styling using Bootstrap Breakpoints *******************/
 
-@media screen and (min-width: 450px) and (max-width: 500px) {
+@media screen and (min-width: 300px) and (max-width: 500px) {
 	div.br {
 		width: 27%;
 		margin: 5px 3%;
