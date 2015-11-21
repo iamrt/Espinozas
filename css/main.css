@@ -141,7 +141,7 @@ footer#footer {
 div.content {
 	width: 100%;
 	overflow: hidden;
-
+	font-size: 1.3em;
 }
 
 /******************* Gallery Styling *******************/
@@ -223,6 +223,18 @@ h3 {
 	color: #346F91;
 	font-size: 1.4em;
 	margin-top: 0;
+}
+
+.left {
+	float: left;
+	width: 20%;
+	margin-right: 5%;
+	text-align: center;
+}
+
+#about {
+	float: left;
+	width: 75%;
 }
 
 /******************* Responsive Styling using Bootstrap Breakpoints *******************/
