@@ -1,11 +1,18 @@
 $(function() {
+
 	
 /***************Mobile Menu***************/
-
 	$('#mobile-menu').on('click', function() {
 		$('nav ul').slideToggle(600)
-		$('button').toggleClass('change-bg');
+		$('button').toggleClass('change-bg'); 
 	});
+
+/*********** Complete Mobile Menu **************/
+/*********** Added for Overlay movement on Mobile *****************/
+
+
+
+
 
 /***************Gallery View***************/
 
@@ -178,7 +185,7 @@ $(function() {
 		$('.wrapper').css('min-height', $winHeight);
 	};
 
-/***************Homepage Fader***************/
+/*************** Homepage Fader ***************/
 	winWidth = window.innerWidth;
 
 	if (winWidth > 768) {
@@ -191,4 +198,10 @@ $(function() {
 						.end().appendTo('#slideshow');},
 			2750);
 	};
+
+/******************* Overlay Placement *******************/
+
+	$slideshowPos = $('#slideshow').position()
+
+	$('#overlay').css("top", $slideshowPos.top - 10);
 });

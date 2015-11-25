@@ -132,11 +132,38 @@ nav ul li a.active {
 
 /******************* Content Styling *******************/
 
+div.mover {
+	position: relative;
+}
+
 div#slideshow {
 	width: 100%;
 	overflow: hidden;
 	height: 470px;
 }
+
+/************************ Overlay Styling ***********************/
+
+div#overlay {
+	position: absolute;
+	top: 279px;
+	left: 30px;
+	margin-top: 52px;
+	padding: 10px;
+	border-radius: 4px;
+	background-color: rgba(143, 149, 153, .75);
+	color: #C9DA2B;
+}
+
+#overlay h4 {
+	font-size: 1.3em;
+}
+
+#overlay h5 {
+	font-size: 1.2em;
+}
+
+
 
 /******************* Set Footer Height to the -height of Footer Piece 1 *******************/
 
@@ -373,7 +400,7 @@ h3 {
 	#ext-view img, #int-view img, #misc-view img, #fin-view img {
 		height: 180px !important;
 	}
-
+	
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
@@ -397,3 +424,5 @@ h3 {
 	#ext-view img, #int-view img, #misc-view img, #fin-view img {
 		height: 310px !important;
 	}
+
+}
